@@ -1,16 +1,3 @@
-# ✨ So you want to run an audit
-
-This `README.md` contains a set of checklists for our audit collaboration.
-
-Your audit will use two repos: 
-- **an _audit_ repo** (this one), which is used for scoping your audit and for providing information to wardens
-- **a _findings_ repo**, where issues are submitted (shared with you after the audit) 
-
-Ultimately, when we launch the audit, this repo will be made public and will contain the smart contracts to be reviewed and all the information needed for audit participants. The findings repo will be made public after the audit report is published and your team has mitigated the identified issues.
-
-Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the audit sponsor (⭐️)**.
-
----
 # Repo setup
 
 ## ⭐️ Sponsor: Add code to this repo
@@ -122,23 +109,23 @@ _Note for C4 wardens: Anything included in the 4naly3er **or** the automated fin
 [ ⭐️ SPONSORS: please confirm/edit the information below. ]
 
 ```
-- If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
+- If you have a public code repo, please share it here: https://github.com/zeta-chain/node and https://github.com/zeta-chain/protocol-contracts/tree/main/contracts  
+- How many contracts are in scope?: 13   
+- Total SLoC for these contracts?: 0  
 - How many external imports are there?:  
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  
-- Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
+- Does most of your code generally use composition or inheritance?: Inheritance  
+- How many external calls?: 0   
 - What is the overall line coverage percentage provided by your tests?:
-- Is this an upgrade of an existing system?:
-- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): 
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
-- Please describe required context:   
-- Does it use an oracle?:  
-- Describe any novel or unique curve logic or mathematical models your code uses: 
-- Is this either a fork of or an alternate implementation of another project?:   
-- Does it use a side-chain?:
-- Describe any specific areas you would like addressed:
+- Is this an upgrade of an existing system?: False
+- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-29 Token, Multi-Chain
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: Yes   
+- Please describe required context: You need to understand how the protocol works to understand how the cross chain elements come into play.   
+- Does it use an oracle?: No 
+- Describe any novel or unique curve logic or mathematical models your code uses: Protocol using shared TSS key to manage assets using decentralized validators 
+- Is this either a fork of or an alternate implementation of another project?: True, Some concepts borrowed from ThorChain and Evmos   
+- Does it use a side-chain?: False
+- Describe any specific areas you would like addressed: Try to break cross-chain elements, ZRC20, accounting between external chain state and Zetachain state
 ```
 
 # Tests
