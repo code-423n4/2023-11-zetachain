@@ -1,0 +1,141 @@
+name: PR Testing
+
+on:
+  pull_request:
+    branches:
+      - develop
+    types:
+      - synchronize
+      - opened
+      - reopened
+      - ready_for_review
+
+concurrency: 
+  group: pr-testing-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+env:
+  S3_BUCKET_PATH: "zetachain-deployment-files/builds/zeta-node"
+  S3_PUBLIC_BUCKET_PATH: "zetachain-external-files"
+  AWS_REGION: "us-east-1"
+  GITHUB_REF_NAME: "$(echo ${{ github.ref_name }} | tr '//' '-')"
+
+jobs:
+  build-and-test:
+    runs-on: buildjet-4vcpu-ubuntu-2004
+    timeout-minutes: 15
+    concurrency:
+      group: "build-and-test"
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set CPU Architecture
+        shell: bash
+        run: |
+          if [ "$(uname -m)" == "aarch64" ]; then
+            echo "CPU_ARCH=arm64" >> $GITHUB_ENV
+          elif [ "$(uname -m)" == "x86_64" ]; then
+            echo "CPU_ARCH=amd64" >> $GITHUB_ENV
+          else
+            echo "Unsupported architecture" >&2
+            exit 1
+          fi
+
+      - name: Install Pipeline Dependencies
+        uses: ./.github/actions/install-dependencies
+        timeout-minutes: 8
+        with:
+          cpu_architecture: ${{ env.CPU_ARCH }}
+          skip_python: "true"
+          skip_aws_cli: "true"
+          skip_docker_compose: "true"
+      
+      - name: Test
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 20
+          max_attempts: 2
+          retry_on: error
+          command: |
+            echo "Running Build Tests"
+            make clean
+            make test
+
+      - name: Build zetacored and zetaclientd
+        env:
+          CGO_ENABLED: 1
+          GOOS: linux
+          GOARCH: ${{ env.CPU_ARCH }}
+        run: |
+          make install-testnet
+          cp "$HOME"/go/bin/* ./
+          chmod a+x ./zetacored
+          ./zetacored version
+
+      - name: Clean Up Workspace
+        if: always()
+        shell: bash
+        run: rm -rf *
+
+  smoke-test:
+    runs-on: ["zeta-runners"] # 25 minutes
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set CPU Architecture
+        shell: bash
+        run: |
+          if [ "$(uname -m)" == "aarch64" ]; then
+            echo "CPU_ARCH=arm64" >> $GITHUB_ENV
+          elif [ "$(uname -m)" == "x86_64" ]; then
+            echo "CPU_ARCH=amd64" >> $GITHUB_ENV
+          else
+            echo "Unsupported architecture" >&2
+            exit 1
+          fi
+
+      - name: Install Pipeline Dependencies
+        uses: ./.github/actions/install-dependencies
+        timeout-minutes: 8
+        with:
+          cpu_architecture: ${{ env.CPU_ARCH }}
+          skip_python: "false"
+          skip_aws_cli: "true"
+          skip_docker_compose: "false"
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        if: github.event.repository.full_name == 'zetachain-chain/node'
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_READ_ONLY }}
+
+      - name: Start Private Network
+        run: |
+          make zetanode
+          cd contrib/localnet/ 
+          docker compose up -d zetacore0 zetacore1 zetaclient0 zetaclient1 eth bitcoin
+
+      - name: Run Smoke Test
+        run: |
+          cd contrib/localnet
+          docker-compose up orchestrator --exit-code-from orchestrator
+          if [ $? -ne 0 ]; then
+            echo "Smoke Test Failed"
+            exit 1
+          fi
+          sleep 10
+
+      - name: Stop Private Network
+        if: always()
+        run: |
+          cd contrib/localnet/
+          docker compose down
+
+      - name: Clean Up Workspace
+        if: always()
+        shell: bash
+        run: rm -rf *
+
+

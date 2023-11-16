@@ -1,0 +1,41 @@
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - revive
+    - ineffassign
+    - unconvert
+    - misspell
+    - goimports
+    - govet
+    - gosec
+    - stylecheck
+    - typecheck
+    - misspell
+    - prealloc
+    - dogsled
+    - goconst
+    - bodyclose
+    - unconvert
+    - unused
+linters-settings:
+  gocyclo:
+    min-complexity: 11
+  errcheck:
+    ignore: fmt:.*,io/ioutil:^Read.*,github.com/spf13/cobra:MarkFlagRequired,github.com/spf13/viper:BindPFlag
+  golint:
+    min-confidence: 1.1
+  exhaustive:
+    check-generated: false
+  exhaustivestruct:
+    check-generated: false
+issues:
+  exclude:
+    - composite
+run:
+  tests: false
+  deadline: 15m
+  timeout: 5m
+  skip-files:
+    - ".*\\.pb\\.go$"
+
