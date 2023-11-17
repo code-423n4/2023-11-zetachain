@@ -1,0 +1,23 @@
+__Stuck/Lost Funds__
+- User mistakes
+    - Sending to improper address
+    - Funds sent to wrong blockchain
+    - Incorrect bitcoin memo 
+    - Invalid user input
+    - Incorrect ABI usage
+- Missing timeout/old TX resolution functionality
+- Insufficent gas
+- User blacklisting
+- State corruption 
+- Admin configurations
+    - Improper system contract set
+        - [x] Set by admin only
+    - Improper ERC20 address set
+        - [x] Set by admin only
+    - TSS transition period 
+- Corrupted sender address information 
+- Error handling
+    - Transaction breaks relayer, resulting in nothing being sent
+    - Observer event dropping
+- Self-destruction of contract 
+- Zetachain coin cap hit

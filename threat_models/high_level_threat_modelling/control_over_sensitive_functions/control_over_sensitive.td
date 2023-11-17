@@ -1,0 +1,36 @@
+__Control Over Sensitive Functionality__
+- System Contract direct call
+    - [x] Only call after voting process on zEVM
+- Connector contract direct call 
+    - [x] Only callable via TSS 
+- Arbitrary calls from connector context
+    - [x] Calls 'zetaXXXX' functions only
+- Lack of upgradeability
+    - [x] Most contracts are upgradable
+- Insecure signing process
+- Frontrunning observations
+- Improper initialization
+- Replay attacks:
+    - Double send
+    - Signature malleability
+    - [x] Acts only upon voting and events
+- Adding arbitrary transactions for voting
+- Removing arbitrary transaction from voting
+- Gas price setting
+    - [x] Voted on
+- Unexpected zERC20 deployment
+    - [x] Admin only function
+- TSS public key/address setting
+    - [x] Admin only function
+- Bad TSS address migration 
+    - [x] Admin only function
+- Updating system contract address
+    - [x] Admin only function
+- Updating system contract bytecode
+    - [x] Admin only function
+- Bad pausing of contract
+    - [x] Admin only function
+- Parameter updating
+- Bad evidence on slashing 
+- Block header additions
+    - [x] Voted on process 

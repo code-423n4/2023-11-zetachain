@@ -165,6 +165,9 @@ Some of the areas of concern for the protocol security [can be found here](docs/
 - **Twitter:** https://twitter.com/zetablockchain
 - **Discord:** https://discord.gg/zetachain
 
+## Threat Models
+Threat models from the ZetaChain Alpha contest can be found [here](threat_models/README.md).
+
 ## Scoping Details 
 
 ```
