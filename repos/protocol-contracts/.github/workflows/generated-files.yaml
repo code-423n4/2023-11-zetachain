@@ -1,0 +1,42 @@
+name: Generated Files are Updated
+on:
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq unzip
+          yarn install
+
+      - name: Install specific version of aibgen
+        run: |
+          wget https://gethstore.blob.core.windows.net/builds/geth-alltools-linux-amd64-1.11.5-a38f4108.tar.gz
+          tar -zxvf geth-alltools-linux-amd64-1.11.5-a38f4108.tar.gz
+          sudo mv geth-alltools-linux-amd64-1.11.5-a38f4108/abigen /usr/local/bin/
+
+      - name: Generate Go packages and typechain-types
+        run: |
+          yarn generate
+
+      - name: Check for changes
+        run: |
+          if git diff --exit-code --ignore-space-change --ignore-all-space --ignore-cr-at-eol -- pkg typechain-types; then
+            echo "Generated Go files are up-to-date."
+          else
+            echo "::error::Generated files are not up-to-date. Please run 'yarn generate' locally and commit any changes."
+            exit 1
+          fi
