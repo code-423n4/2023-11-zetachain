@@ -54,16 +54,149 @@ _Note for C4 wardens: Anything included in the 4naly3er **or** the automated fin
 
 # Overview
 
-[ ⭐️ SPONSORS: add info here ]
+ZetaChain protocol is composed of two repositories:
+
+- [`node`](repos/node/): ZetaChain source code based on Cosmos-SDK
+- [`protocol-contracts`](repos/protocol-contracts/): Smart contracts deployed on ZetaChain or external chains to support interoperability
+
+## Node
+
+ZetaChain is based on Cosmos-SDK - [see here our usage of the framework](docs/usage-cosmos-sdk.md)
+
+Overview of the architecture of the node [can be found here](https://www.zetachain.com/docs/architecture/overview/)
+
+The main sections of the source code are:
+- [`x (modules)`](repos/node/x/): contains the source code of the Cosmos-SDK modules of the blockchain
+  - [More info about the modules](docs/modules.md)
+- [`zetaclient`](repos/node/zetaclient/): contains the code for the observer client validating cross-chain transactions on ZetaChain
+- [`smoketests`](repos/node/contrib/): contains utilities to run smoke tests of the protocol, and local experimentation
+
+## Protocol Contracts
+
+The protocol contracts are separated into two sections:
+
+- [`zevm`](repos/protocol-contracts/contracts/zevm/): contains contracts deployed on ZetaChain
+- [`evm`](repos/protocol-contracts/contracts/evm/): contains contracts deployed on external EVM chains to be supported by ZetaChain
+
+## Commands
+
+### Requirements
+
+- Go 1.20 (ZetaChain can only be built with this version of Go specifically)
+- Docker (for smoke tests)
+- Yarn
+
+### `node`
+
+Build the `zetacored` (blockchain node binary), and `zetacliend` (ZetaClient binary)
+```
+make install
+```
+Run the unit tests
+```
+make test
+```
+Run a standalone local blockchain node
+```
+make init
+make run
+```
+Run the smoke tests
+```
+make start-smoketest
+make stop-smoketest
+```
+
+### `protocol-contracts`
+
+Compile the smart contracts
+```
+yarn
+yarn compile
+```
+
+Run the unit tests
+```
+yarn test
+```
+
+## Experimentation with a local network
+
+### Containers
+
+The smoke tests under `contrib` allow testing of the different workflow of cross-chain functionalities on an E2E basis.
+
+It also allows to experimentation of the protocol in a local environment. Running the smoke tests create several containers including:
+
+- `zetacore0`: a ZetaChain node
+- `zetaclient0`: a observer ZetaClient
+- `eth`: a local Ethereum network connected to ZetaChain
+- `bitcoin`: a local Bitcoin network connected to ZetaChain
+- `orchestrator`: smoke tests runnner
+
+After starting the networks with:
+
+```
+make start-smoketest
+```
+
+### ZetaChain
+
+The user can connect to the `zetacore0` and directly use the node CLI with the `zetacored` binary with a funded account:
+```
+docker exec -it zetacore0 sh
+
+/usr/local/bin # zetacored q bank balances zeta172uf5cwptuhllf6n4qsncd9v6xh59waxnu83kq
+balances:
+- amount: "4199000000000000000000000"
+  denom: azeta
+```
+
+### Ethereum
+
+The user can interact with the local Ethereum node with the exposed RPC on `http://0.0.0.0:8545`.
+The following testing account is funded:
+```
+Address: 0xE5C5367B8224807Ac2207d350E60e1b6F27a7ecC
+Private key: d87baf7bf6dc560a252596678c12e41f7d1682837f05b29d411bc3f78ae2c263
+```
+
+Examples with the `cast` CLI:
+```
+cast balance 0xE5C5367B8224807Ac2207d350E60e1b6F27a7ecC --rpc-url http://0.0.0.0:8545
+98897999997945970464
+
+cast send 0x9fd96203f7b22bCF72d9DCb40ff98302376cE09c --value 42 --rpc-url http://0.0.0.0:8545 --private-key "d87baf7bf6dc560a252596678c12e41f7d1682837f05b29d411bc3f78ae2c263"
+```
+
+### Custom programmatic interactions
+
+The `smoketest` package contains an API to interact programmatically with the different network:
+```go
+type SmokeTest struct {
+	zetaTxServer    ZetaTxServer
+	cctxClient      crosschaintypes.QueryClient
+	fungibleClient  fungibletypes.QueryClient
+	authClient      authtypes.QueryClient
+	bankClient      banktypes.QueryClient
+	observerClient  observertypes.QueryClient
+	goerliAuth      *bind.TransactOpts
+	zevmAuth        *bind.TransactOpts
+}
+```
+The user can use this API for custom testing on the networks and insert custom tests in `smoketest/main.go` (and commenting out unnecessary tests), the tests will automatically run upon starting the smoke tests. Current existing smoke tests are a good source to learn how to implement custom tests.
+
+## Areas of Concerns
+
+Some of the areas of concern for the protocol security [can be found here](docs/important-areas.md)
 
 ## Links
 
-- **Previous audits:** 
-- **Documentation:**
-- **Website:**
-- **Twitter:** 
-- **Discord:** 
-
+- **Previous audits:** https://drive.google.com/drive/folders/10PFcoASYKhllalv5n1AW4mYD12urPgWJ
+- **Documentation:** https://www.zetachain.com/docs/
+- **Website:** https://www.zetachain.com/
+- **Twitter:** https://twitter.com/zetablockchain
+- **Discord:** https://discord.gg/zetachain
 
 # Scope
 
