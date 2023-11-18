@@ -26,6 +26,19 @@ ZetaChain protocol is composed of two repositories:
 - [`node`](repos/node/): ZetaChain source code based on Cosmos-SDK
 - [`protocol-contracts`](repos/protocol-contracts/): Smart contracts deployed on ZetaChain or external chains to support interoperability
 
+## Onboarding Resources for ZetaChain and Cosmos SDK
+
+Three teams of wardens competed in a pre-audit Alpha competition to produce the best possible onboarding resources:
+- [032](https://github.com/code-423n4/alpha-zetachain/tree/main/032)
+- [Gummy Bear Guardians](https://github.com/code-423n4/alpha-zetachain/tree/main/KrisApostolov-juancito)
+- [ZetaLotus](https://github.com/code-423n4/alpha-zetachain/tree/main/BlockChomper-0xladboy-reentrant)
+
+In each team's workspace, you'll find: 
+
+- Project 101/FAQ (“5 minutes to coding”)
+- Testing 101/FAQ (“5 minutes to testing” plus best resources)
+- A collection/documentation of classes of vulnerabilities
+
 ## Node
 
 ZetaChain is based on Cosmos-SDK - [see here our usage of the framework](docs/usage-cosmos-sdk.md)
