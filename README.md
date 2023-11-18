@@ -178,6 +178,25 @@ Some of the areas of concern for the protocol security [can be found here](docs/
 - **Twitter:** https://twitter.com/zetablockchain
 - **Discord:** https://discord.gg/zetachain
 
+# Scope
+
+[ ⭐️ SPONSORS: add scoping and technical details here ]
+
+- [ ] In the table format shown below, provide the name of each contract and:
+  - [ ] source lines of code (excluding blank lines and comments) in each *For line of code counts, we recommend running prettier with a 100-character line length, and using [cloc](https://github.com/AlDanial/cloc).* 
+  - [ ] external contracts called in each
+  - [ ] libraries used in each
+
+*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
+
+| Contract | SLOC | Purpose | Libraries used |  
+| ----------- | ----------- | ----------- | ----------- |
+| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+
+## Out of scope
+
+*List any files/contracts that are out of scope for this audit.*
+
 ## Threat Models
 Threat models from the ZetaChain Alpha contest can be found [here](threat_models/README.md).
 
