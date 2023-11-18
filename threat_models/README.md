@@ -5,7 +5,7 @@ This folder is meant to consolidate threat models created in [ThreatDown](https:
 # Repositories for teams that participated in Phase 2 of the Alpha Contest
 
  - [ZetaLotus](https://github.com/BlockChomper/threats-zetachain/tree/main/BlockChomper-0xladboy-reentrant)
- - [The Gummy Bear Guardians](https://github.com/O-Three-Two/2023-10-zetachain-alpha)
+ - [032](https://github.com/O-Three-Two/2023-10-zetachain-alpha)
 
 
 # Viewing threat models via GitHub
