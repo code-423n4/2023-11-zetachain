@@ -194,7 +194,6 @@ Some of the areas of concern for the protocol security [can be found here](docs/
 |contracts/evm/ZetaConnector.eth.sol                                 |65      |
 |contracts/zevm/WZETA.sol                                            |47      |
 |contracts/evm/Zeta.non-eth.sol                                      |43      |
-|contracts/evm/tools/ZetaInteractor.sol                              |36      |
 |contracts/evm/interfaces/ZetaInterfaces.sol                         |36      |
 |contracts/evm/tools/interfaces/TridentIPoolRouter.sol               |35      |
 |contracts/zevm/Interfaces.sol                                       |9       |
