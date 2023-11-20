@@ -206,7 +206,6 @@ Some of the areas of concern for the protocol security [can be found here](docs/
 |contracts/zevm/Uniswap.sol                                          |4       |
 |contracts/evm/interfaces/ZetaNonEthInterface.sol                    |4       |
 |contracts/zevm/interfaces/IZRC20.sol                                |3       |
-|contracts/evm/tools/interfaces/TridentConcentratedLiquidityPoolFactory.sol|3       |
 |contracts/zevm/UniswapPeriphery.sol                                 |3       |
 |contracts/zevm/interfaces/IUniswapV2Router01.sol                    |3       |
 
