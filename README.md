@@ -175,7 +175,7 @@ The user can use this API for custom testing on the networks and insert custom t
 
 ## Areas of Concerns
 
-- Some of the areas of concern for the protocol security [can be found here](https://github.com/code-423n4/2023-11-zetachain/docs/important-areas.md). 
+- Some of the areas of concern for the protocol security [can be found here](https://github.com/code-423n4/2023-11-zetachain/blob/main/docs/important-areas.md).
 - Threat models from the ZetaChain Alpha competition [can be viewed here](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/README.md).
 
 ## Links
