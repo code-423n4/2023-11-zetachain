@@ -190,7 +190,7 @@ The user can use this API for custom testing on the networks and insert custom t
 
 ## Contracts
 
-|File                                                               |Column 1|
+|File                                                               |SLOC|
 |--------------------------------------------------------------------|--------|
 |contracts/zevm/ZRC20.sol                                            |159     |
 |contracts/evm/tools/ZetaTokenConsumerPancakeV3.strategy.sol         |143     |
