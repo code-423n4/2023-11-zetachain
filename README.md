@@ -24,18 +24,27 @@ ZetaChain protocol is composed of two repositories:
 - [`node`](repos/node/): ZetaChain source code based on Cosmos-SDK
 - [`protocol-contracts`](repos/protocol-contracts/): Smart contracts deployed on ZetaChain or external chains to support interoperability
 
-## Onboarding Resources for ZetaChain and Cosmos SDK
+## Warden Resources for ZetaChain and Cosmos SDK: onboarding
 
-Three teams of wardens competed in a pre-audit Alpha competition to produce the best possible onboarding resources:
+Prior to this competitive audit, 3 teams of Code4rena wardens competed to produce a set of resources to help accelerate wardens’ ability to compete. Wardens unfamiliar with ZetaChain and/or Cosmos SDK are recommended to review the materials created by each team:
+
+- [ZetaLotus](https://github.com/code-423n4/alpha-zetachain/tree/main/BlockChomper-0xladboy-reentrant)
 - [032](https://github.com/code-423n4/alpha-zetachain/tree/main/032)
 - [Gummy Bear Guardians](https://github.com/code-423n4/alpha-zetachain/tree/main/KrisApostolov-juancito)
-- [ZetaLotus](https://github.com/code-423n4/alpha-zetachain/tree/main/BlockChomper-0xladboy-reentrant)
 
 In each team's workspace, you'll find: 
 
 - Project 101/FAQ (“5 minutes to coding”)
 - Testing 101/FAQ (“5 minutes to testing” plus best resources)
 - A collection/documentation of classes of vulnerabilities
+
+Teams ZetaLotus and 032 also produced: 
+
+- Threat models
+- architecture diagrams
+- functional call flows
+
+[The consolidated threat models, and links to additional resoures, can be viewed here.](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/README.md)
 
 ## Node
 
@@ -166,7 +175,8 @@ The user can use this API for custom testing on the networks and insert custom t
 
 ## Areas of Concerns
 
-Some of the areas of concern for the protocol security [can be found here](docs/important-areas.md)
+- Some of the areas of concern for the protocol security [can be found here](https://github.com/code-423n4/2023-11-zetachain/docs/important-areas.md). 
+- Threat models from the ZetaChain Alpha competition [can be viewed here](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/README.md).
 
 ## Links
 
@@ -194,9 +204,6 @@ Some of the areas of concern for the protocol security [can be found here](docs/
 ## Out of scope
 
 *List any files/contracts that are out of scope for this audit.*
-
-## Threat Models
-Threat models from the ZetaChain Alpha contest can be found [here](threat_models/README.md).
 
 ## Scoping Details 
 
