@@ -193,7 +193,12 @@ The user can use this API for custom testing on the networks and insert custom t
 |File                                                               |Column 1|
 |--------------------------------------------------------------------|--------|
 |contracts/zevm/ZRC20.sol                                            |159     |
+|contracts/evm/tools/ZetaTokenConsumerPancakeV3.strategy.sol         |143     |
+|contracts/evm/tools/ZetaTokenConsumerTrident.strategy.sol           |132     |
+|contracts/evm/tools/ZetaTokenConsumerUniV3.strategy.sol             |131     |
 |contracts/evm/ERC20Custody.sol                                      |120     |
+|contracts/evm/tools/ZetaTokenConsumerUniV2.strategy.sol             |120     |
+|contracts/evm/tools/ImmutableCreate2Factory.sol                     |93      |
 |contracts/evm/ZetaConnector.base.sol                                |92      |
 |contracts/zevm/SystemContract.sol                                   |89      |
 |contracts/zevm/ZetaConnectorZEVM.sol                                |73      |
@@ -201,7 +206,9 @@ The user can use this API for custom testing on the networks and insert custom t
 |contracts/evm/ZetaConnector.eth.sol                                 |65      |
 |contracts/zevm/WZETA.sol                                            |47      |
 |contracts/evm/Zeta.non-eth.sol                                      |43      |
+|contracts/evm/tools/ZetaInteractor.sol                              |36      |
 |contracts/evm/interfaces/ZetaInterfaces.sol                         |36      |
+|contracts/evm/tools/interfaces/TridentIPoolRouter.sol               |35      |
 |contracts/zevm/Interfaces.sol                                       |9       |
 |contracts/evm/interfaces/ZetaErrors.sol                             |9       |
 |contracts/evm/interfaces/ConnectorErrors.sol                        |9       |
@@ -213,6 +220,7 @@ The user can use this API for custom testing on the networks and insert custom t
 |contracts/zevm/Uniswap.sol                                          |4       |
 |contracts/evm/interfaces/ZetaNonEthInterface.sol                    |4       |
 |contracts/zevm/interfaces/IZRC20.sol                                |3       |
+|contracts/evm/tools/interfaces/TridentConcentratedLiquidityPoolFactory.sol|3       |
 |contracts/zevm/UniswapPeriphery.sol                                 |3       |
 |contracts/zevm/interfaces/IUniswapV2Router01.sol                    |3       |
 
