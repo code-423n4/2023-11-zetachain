@@ -192,37 +192,37 @@ The user can use this API for custom testing on the networks and insert custom t
 
 |File                                                               |SLOC|
 |--------------------------------------------------------------------|--------|
-|contracts/zevm/ZRC20.sol                                            |159     |
-|contracts/evm/tools/ZetaTokenConsumerPancakeV3.strategy.sol         |143     |
-|contracts/evm/tools/ZetaTokenConsumerTrident.strategy.sol           |132     |
-|contracts/evm/tools/ZetaTokenConsumerUniV3.strategy.sol             |131     |
-|contracts/evm/ERC20Custody.sol                                      |120     |
-|contracts/evm/tools/ZetaTokenConsumerUniV2.strategy.sol             |120     |
-|contracts/evm/tools/ImmutableCreate2Factory.sol                     |93      |
-|contracts/evm/ZetaConnector.base.sol                                |92      |
-|contracts/zevm/SystemContract.sol                                   |89      |
-|contracts/zevm/ZetaConnectorZEVM.sol                                |73      |
-|contracts/evm/ZetaConnector.non-eth.sol                             |71      |
-|contracts/evm/ZetaConnector.eth.sol                                 |65      |
-|contracts/zevm/WZETA.sol                                            |47      |
-|contracts/evm/Zeta.non-eth.sol                                      |43      |
-|contracts/evm/tools/ZetaInteractor.sol                              |36      |
-|contracts/evm/interfaces/ZetaInterfaces.sol                         |36      |
-|contracts/evm/tools/interfaces/TridentIPoolRouter.sol               |35      |
-|contracts/zevm/Interfaces.sol                                       |9       |
-|contracts/evm/interfaces/ZetaErrors.sol                             |9       |
-|contracts/evm/interfaces/ConnectorErrors.sol                        |9       |
-|contracts/zevm/interfaces/zContract.sol                             |8       |
-|contracts/zevm/interfaces/IWZETA.sol                                |7       |
-|contracts/evm/Zeta.eth.sol                                          |7       |
-|contracts/evm/interfaces/ZetaInteractorErrors.sol                   |7       |
-|contracts/zevm/interfaces/IUniswapV2Router02.sol                    |4       |
-|contracts/zevm/Uniswap.sol                                          |4       |
-|contracts/evm/interfaces/ZetaNonEthInterface.sol                    |4       |
-|contracts/zevm/interfaces/IZRC20.sol                                |3       |
-|contracts/evm/tools/interfaces/TridentConcentratedLiquidityPoolFactory.sol|3       |
-|contracts/zevm/UniswapPeriphery.sol                                 |3       |
-|contracts/zevm/interfaces/IUniswapV2Router01.sol                    |3       |
+|[contracts/zevm/ZRC20.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/ZRC20.sol)                                            |159     |
+|[contracts/evm/tools/ZetaTokenConsumerPancakeV3.strategy.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/tools/ZetaTokenConsumerPancakeV3.strategy.sol)         |143     |
+|[contracts/evm/tools/ZetaTokenConsumerTrident.strategy.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/tools/ZetaTokenConsumerTrident.strategy.sol)           |132     |
+|[contracts/evm/tools/ZetaTokenConsumerUniV3.strategy.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/tools/ZetaTokenConsumerUniV3.strategy.sol)             |131     |
+|[contracts/evm/ERC20Custody.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/ERC20Custody.sol)                                      |120     |
+|[contracts/evm/tools/ZetaTokenConsumerUniV2.strategy.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/tools/ZetaTokenConsumerUniV2.strategy.sol)             |120     |
+|[contracts/evm/tools/ImmutableCreate2Factory.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/tools/ImmutableCreate2Factory.sol)                     |93      |
+|[contracts/evm/ZetaConnector.base.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/ZetaConnector.base.sol)                                |92      |
+|[contracts/zevm/SystemContract.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/SystemContract.sol)                                   |89      |
+|[contracts/zevm/ZetaConnectorZEVM.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/ZetaConnectorZEVM.sol)                                |73      |
+|[contracts/evm/ZetaConnector.non-eth.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/ZetaConnector.non-eth.sol)                             |71      |
+|[contracts/evm/ZetaConnector.eth.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/ZetaConnector.eth.sol)                                 |65      |
+|[contracts/zevm/WZETA.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/WZETA.sol)                                            |47      |
+|[contracts/evm/Zeta.non-eth.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/Zeta.non-eth.sol)                                      |43      |
+|[contracts/evm/tools/ZetaInteractor.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/tools/ZetaInteractor.sol)                              |36      |
+|[contracts/evm/interfaces/ZetaInterfaces.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/interfaces/ZetaInterfaces.sol)                         |36      |
+|[contracts/evm/tools/interfaces/TridentIPoolRouter.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/tools/interfaces/TridentIPoolRouter.sol)               |35      |
+|[contracts/zevm/Interfaces.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/Interfaces.sol)                                       |9       |
+|[contracts/evm/interfaces/ZetaErrors.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/interfaces/ZetaErrors.sol)                             |9       |
+|[contracts/evm/interfaces/ConnectorErrors.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/interfaces/ConnectorErrors.sol)                        |9       |
+|[contracts/zevm/interfaces/zContract.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/interfaces/zContract.sol)                             |8       |
+|[contracts/zevm/interfaces/IWZETA.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/interfaces/IWZETA.sol)                                |7       |
+|[contracts/evm/Zeta.eth.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/Zeta.eth.sol)                                          |7       |
+|[contracts/evm/interfaces/ZetaInteractorErrors.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/interfaces/ZetaInteractorErrors.sol)                   |7       |
+|[contracts/zevm/interfaces/IUniswapV2Router02.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/interfaces/IUniswapV2Router02.sol)                    |4       |
+|[contracts/zevm/Uniswap.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/Uniswap.sol)                                          |4       |
+|[contracts/evm/interfaces/ZetaNonEthInterface.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/interfaces/ZetaNonEthInterface.sol)                    |4       |
+|[contracts/zevm/interfaces/IZRC20.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/interfaces/IZRC20.sol)                                |3       |
+|[contracts/evm/tools/interfaces/TridentConcentratedLiquidityPoolFactory.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/evm/tools/interfaces/TridentConcentratedLiquidityPoolFactory.sol)|3       |
+|[contracts/zevm/UniswapPeriphery.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/UniswapPeriphery.sol)                                 |3       |
+|[contracts/zevm/interfaces/IUniswapV2Router01.sol](https://github.com/code-423n4/2023-11-zetachain/tree/main/repos/protocol-contracts/contracts/zevm/interfaces/IUniswapV2Router01.sol)                    |3       |
 
 
 ## Node
