@@ -11,6 +11,8 @@
 - Starts November 20, 2023 20:00 UTC
 - Ends December 18, 2023 20:00 UTC 
 
+❗️**Note for C4 wardens:** For this contest, analysis and gas optimizations are out of scope. ZetaChain will not be awarding prize funds for analysis or gas-specific submissions.
+
 ## Automated Findings / Publicly Known Issues
 
 The 4naly3er report can be found [here](https://github.com/code-423n4/2023-10-zetachain/blob/main/4naly3er-report.md).
