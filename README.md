@@ -186,9 +186,6 @@ Some of the areas of concern for the protocol security [can be found here](docs/
 |File                                                               |Column 1|
 |--------------------------------------------------------------------|--------|
 |contracts/zevm/ZRC20.sol                                            |159     |
-|contracts/evm/tools/ZetaTokenConsumerPancakeV3.strategy.sol         |143     |
-|contracts/evm/tools/ZetaTokenConsumerTrident.strategy.sol           |132     |
-|contracts/evm/tools/ZetaTokenConsumerUniV3.strategy.sol             |131     |
 |contracts/evm/ERC20Custody.sol                                      |120     |
 |contracts/evm/ZetaConnector.base.sol                                |92      |
 |contracts/zevm/SystemContract.sol                                   |89      |
