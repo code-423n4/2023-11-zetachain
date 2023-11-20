@@ -48,7 +48,7 @@ Teams ZetaLotus and 032 also produced:
 
 ## Node
 
-ZetaChain is based on Cosmos-SDK - [see here our usage of the framework](docs/usage-cosmos-sdk.md)
+ZetaChain is based on Cosmos-SDK - [see here our usage of the framework](https://github.com/code-423n4/2023-11-zetachain/blob/main/docs/usage-cosmos-sdk.md)
 
 Overview of the architecture of the node [can be found here](https://www.zetachain.com/docs/architecture/overview/)
 
