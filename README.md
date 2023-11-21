@@ -622,7 +622,7 @@ Please note that **ALL** the files are in scope, but the files listed in the pre
 - How many external calls?: 0   
 - What is the overall line coverage percentage provided by your tests?:
 - Is this an upgrade of an existing system?: False
-- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-29 Token, Multi-Chain
+- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-20 Token, Multi-Chain
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: Yes   
 - Please describe required context: You need to understand how the protocol works to understand how the cross chain elements come into play.   
 - Does it use an oracle?: No 
