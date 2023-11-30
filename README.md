@@ -1,6 +1,6 @@
 # ZetaChain audit details
-- Total Prize Pool: $150,000 USDC 
-  - HM awards: $121,400 USDC 
+- Total Prize Pool: $153,886 USDC 
+  - HM awards: $125,286 USDC 
   - QA awards: $3,100 USDC 
   - Judge awards: $15,000 USDC
   - Lookout awards: $10,000 USDC 
