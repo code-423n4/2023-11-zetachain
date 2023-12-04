@@ -16,16 +16,16 @@ Threat models in this repo have been rendered as svg files.  To best view these 
 
 #### High Level Threat Models
 
-- [Consensus Manipulation](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/high_level_threat_modelling/consensus_manipulation/consensus_manipulation.svg)
-- [Control Over Sensitive Functions](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/high_level_threat_modelling/control_over_sensitive_functions/control_over_sensitive.svg)
-- [Denial of Service](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/high_level_threat_modelling/denial_of_service/dos.svg)
-- [Freeze Funds](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/high_level_threat_modelling/freeze_funds/freeze_funds.svg)
-- [Steal Funds](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/high_level_threat_modelling/steal_funds/steal_funds.svg)
-- [Stuck Funds](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/high_level_threat_modelling/stuck_funds/stuck_funds.svg)
+- [Consensus Manipulation](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/high_level_threat_modelling/consensus_manipulation/consensus_manipulation.svg)
+- [Control Over Sensitive Functions](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/high_level_threat_modelling/control_over_sensitive_functions/control_over_sensitive.svg)
+- [Denial of Service](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/high_level_threat_modelling/denial_of_service/dos.svg)
+- [Freeze Funds](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/high_level_threat_modelling/freeze_funds/freeze_funds.svg)
+- [Steal Funds](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/high_level_threat_modelling/steal_funds/steal_funds.svg)
+- [Stuck Funds](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/high_level_threat_modelling/stuck_funds/stuck_funds.svg)
 
 #### Module Level Threat Models
 
-- [Crosschain Module](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/modules_level_threat_modelling/crosschain_module/crosschain_module.svg)
-- [Emission Module](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/modules_level_threat_modelling/emission_module/emission_module.svg)
-- [Fungible Module](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/modules_level_threat_modelling/fungible_module/fungible_module.svg)
-- [Observer Module](https://github.com/0xean/zetachain-alpha/blob/main/threat_models/modules_level_threat_modelling/observer_module/observer_module.svg)
+- [Crosschain Module](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/modules_level_threat_modelling/crosschain_module/crosschain_module.svg)
+- [Emission Module](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/modules_level_threat_modelling/emission_module/emission_module.svg)
+- [Fungible Module](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/modules_level_threat_modelling/fungible_module/fungible_module.svg)
+- [Observer Module](https://github.com/code-423n4/2023-11-zetachain/blob/main/threat_models/modules_level_threat_modelling/observer_module/observer_module.svg)
